@@ -1,7 +1,8 @@
+/**
+ * Represents a passenger
+ */
 public class Passenger {
-    /**
-     * Passenger attribute
-     */
+    // Passenger attribute
     private String name;
 
     /**

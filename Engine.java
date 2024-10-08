@@ -1,7 +1,8 @@
+/**
+ * Represents the engine of the train
+ */
 public class Engine {
-    /**
-     * Engine attributes
-     */
+    //Engine attributes
     private FuelType f;
     private double currentFuelLevel;
     private double maxFuelLevel;
@@ -62,6 +63,9 @@ public class Engine {
         }
     } 
 
+    /**
+     * Test Engine methods
+     */
     public static void main(String[] args) {
         Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
         while (myEngine.go()) {

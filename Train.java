@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 
+/**
+ * Represents a train
+ */
 public class Train {
 
-    /**
-     * Train attributes
-     */
+    // Train attributes
     private Engine engine;
     private ArrayList<Car> carsAttatched;
 
@@ -73,6 +74,10 @@ public class Train {
         }
     }
 
+    /**
+     * Test Train methods
+     * @param args
+     */
     public static void main(String[] args) {
         Train train = new Train(FuelType.STEAM, 100.00, 3, 2);
         Passenger sophia = new Passenger("Sophia");

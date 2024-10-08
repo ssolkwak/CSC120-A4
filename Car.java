@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 
+/**
+ * Represents a Car of a train
+ */
 public class Car {
-    /**
-     * Car attributes
-     */
+    //Car attributes
     private ArrayList<Passenger> passengersOnboard;
     private int maxCapacity;
 
     /**
-     * Car constructor; creates ArrayList of passengers with capacity of maxCapacity
+     * Car constructor which creates ArrayList of passengers with capacity of maxCapacity
      * @param maxCapacity maximum passenger capacity of the car
      */
     public Car(int maxCapacity){
@@ -75,6 +76,10 @@ public class Car {
         }
     }
 
+    /**
+     * Test Car methods
+     * @param args
+     */
     public static void main(String[] args) {
         Car car = new Car(3);
         Passenger sophia = new Passenger("Sophia");
