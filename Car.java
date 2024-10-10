@@ -38,12 +38,11 @@ public class Car {
      * @param p passenger to add
      * @return T/F: if the car has open seat and is able to add passenger
      */
-    public boolean addPassenger(Passenger p){
-        if(this.seatsRemaining() > 0){
+    public void addPassenger(Passenger p){
+        if(this.seatsRemaining() > 0 && !this.passengersOnboard.contains(p)){
             this.passengersOnboard.add(p);
-            return true;
-        }else{
-            return false;
+        } else {
+            int x = 1/0;
         }
         
     }
@@ -53,12 +52,11 @@ public class Car {
      * @param p passenger to remove
      * @return T/F: if the car has the passenger and is able to remove passenger 
      */
-    public boolean removePassenger(Passenger p){
+    public void removePassenger(Passenger p){
         if(this.passengersOnboard.contains(p)){
             this.passengersOnboard.remove(p);
-            return true;
-        }else{
-            return false;
+        } else {
+            int x = 1/0;
         }
     }
 
@@ -92,13 +90,12 @@ public class Car {
         System.out.println(car.seatsRemaining());
         car.addPassenger(katherine);
         car.addPassenger(vivian);
-        car.addPassenger(ruby);
         car.printManifest();
         ruby.boardCar(car);
         car.removePassenger(sophia);
-        vivian.getOffCar(car);
-        ruby.getOffCar(car);
         ruby.boardCar(car);
+        vivian.getOffCar(car);
+        vivian.getOffCar(car);
         car.printManifest();
 
     }

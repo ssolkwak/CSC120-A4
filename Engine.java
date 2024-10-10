@@ -54,13 +54,13 @@ public class Engine {
      * @return T/F: if there is fuel left in engine
      */
     public boolean go(){
-        this.currentFuelLevel -= 20;
-        System.out.printf("Remaining fuel level: %f \n", this.getCurrentFuelLevel());
-        if (this.currentFuelLevel > 0){
-            return true;
+        if (this.currentFuelLevel >= 20){
+            this.currentFuelLevel -= 20;
         } else {
-            return false;
+            this.currentFuelLevel = 0;
         }
+        System.out.printf("Remaining fuel level: %f \n", this.getCurrentFuelLevel());
+        return this.currentFuelLevel > 0;
     } 
 
     /**

@@ -26,7 +26,9 @@ public class Passenger {
      * @param c car
      */
     public void boardCar(Car c){
-        if(!c.addPassenger(this)){
+        try{
+            c.addPassenger(this);
+        } catch (Exception e){
             System.out.println("This car is FULL.");
         }
     }
@@ -36,7 +38,9 @@ public class Passenger {
      * @param c car
      */
     public void getOffCar(Car c){
-        if(!c.removePassenger(this)){
+        try{
+            c.removePassenger(this);
+        } catch (Exception e){
             System.out.println("Passenger is not onboard.");
         }
     }
