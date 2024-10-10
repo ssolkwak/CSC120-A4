@@ -42,7 +42,7 @@ public class Car {
         if(this.seatsRemaining() > 0 && !this.passengersOnboard.contains(p)){
             this.passengersOnboard.add(p);
         } else {
-            int x = 1/0;
+            int e = 1/0;
         }
         
     }
@@ -56,7 +56,7 @@ public class Car {
         if(this.passengersOnboard.contains(p)){
             this.passengersOnboard.remove(p);
         } else {
-            int x = 1/0;
+            int e = 1/0;
         }
     }
 
